@@ -1,0 +1,10 @@
+# Flask App Dependencies
+Flask==3.0.0
+Flask-SocketIO==5.3.6
+python-socketio==5.10.0
+eventlet==0.35.2
+python-dotenv==1.0.0
+
+# Common for Bot Scripts
+requests==2.31.0
+pyTelegramBotAPI==4.15.4
