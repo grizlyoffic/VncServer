@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Console</title>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.0/socket.io.js"></script>
+</head>
+<body>
+  <h2>Bot Console</h2>
+  <button onclick="startBot()">Start Bot</button>
+  <pre id="output"></pre>
+
+  <script>
+    var socket = io();
+    function startBot() {
+      socket.emit('start_bot');
+    }
+    socket.on('console_output', function(data) {
+      document.getElementById('output').textContent += data;
+    });
+  </script>
+</body>
+</html>
